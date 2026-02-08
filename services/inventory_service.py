@@ -10,63 +10,68 @@ class InventoryService:
     def __init__(self):
         self.repo = InventoryRepository()
 
+    def add_product(self, product_data):
+        data = self.repo.load_data()
+        new_id = len(data["products"]) + 1
 
-def add_product(self, product_data):
-    data = self.repo.load_data()
-    new_id = len(data["products"]) + 1
+        product = Product(new_id,
+                          product_data["name"],
+                          product_data["price"],
+                          product_data["stock"])
 
-    product = Product(new_id,
-                      product_data["name"],
-                      product_data["price"],
-                      product_data["stock"])
+        data["products"].append(product.to_dict())
+        self.repo.save_data(data)
 
-    data["products"].append(product.to_dict())
-    self.repo.save_data(data)
+    def add_customer(self, customer_data):
+        data = self.repo.load_data()
+        new_id = len(data["customers"]) + 1
 
+        customer = Customer(new_id, customer_data["name"])
+        data["customers"].append(customer.to_dict())
+        self.repo.save_data(data)
 
-def add_customer(self, customer_data):
-    data = self.repo.load_data()
-    new_id = len(data["customers"]) + 1
+    def place_order(self, order_data):
+        data = self.repo.load_data()
+        new_id = len(data["orders"]) + 1
 
-    customer = Customer(new_id, customer_data["name"])
-    data["customers"].append(customer.to_dict())
-    self.repo.save_data(data)
+        product = next(
+            (p for p in data["products"]
+             if p["product_id"] == order_data["product_id"]),
+            None
+        )
 
+        if not product:
+            print("Product not found.")
+            return
 
-def place_order(self, order_data):
-    data = self.repo.load_data()
-    new_id = len(data["orders"]) + 1
+        if product["stock"] < order_data["quantity"]:
+            print("Not enough stock available.")
+            return
 
-    product = next(
-        (p for p in data["products"]
-         if p["product_id"] == order_data["product_id"]),
-        None
-    )
+        total_price = product["price"] * order_data["quantity"]
+        product["stock"] -= order_data["quantity"]
 
-    if not product:
-        print("Product not found.")
-        return
+        order = Order(new_id,
+                      order_data["customer_id"],
+                      order_data["product_id"],
+                      order_data["quantity"],
+                      total_price)
 
-    if product["stock"] < order_data["quantity"]:
-        print("Not enough stock available.")
-        return
+        data["orders"].append(order.to_dict())
+        self.repo.save_data(data)
 
-    total_price = product["price"] * order_data["quantity"]
-    product["stock"] -= order_data["quantity"]
+    def get_all_products(self):
+        return self.repo.load_data()["products"]
 
-    order = Order(new_id,
-                  order_data["customer_id"],
-                  order_data["product_id"],
-                  order_data["quantity"],
-                  total_price)
+    def get_all_orders(self):
+        return self.repo.load_data()["orders"]
 
-    data["orders"].append(order.to_dict())
-    self.repo.save_data(data)
+    def generate_sales_report(self):
+        data = self.repo.load_data()
+        revenue = calculate_total_revenue(data["orders"])
 
-
-def get_all_products(self):
-    return self.repo.load_data()["products"]
-
-
-def get_all_orders(self):
-    return self.repo.load_data()["orders"]
+        return {
+            "total_products": len(data["products"]),
+            "total_orders": len(data["orders"]),
+            "total_revenue": revenue
+        }
