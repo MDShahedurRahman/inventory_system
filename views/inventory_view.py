@@ -20,3 +20,10 @@ class InventoryView:
 
     def get_customer_input(self):
         return {"name": input("Customer name: ")}
+
+    def get_order_input(self):
+        return {
+            "customer_id": int(input("Customer ID: ")),
+            "product_id": int(input("Product ID: ")),
+            "quantity": int(input("Quantity: "))
+        }
