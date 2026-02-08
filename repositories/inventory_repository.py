@@ -12,3 +12,9 @@ class InventoryRepository:
 
         with open(self.FILE_PATH, "r") as file:
             return json.load(file)
+
+    def save_data(self, data):
+        os.makedirs("data", exist_ok=True)
+
+        with open(self.FILE_PATH, "w") as file:
+            json.dump(data, file, indent=4)
