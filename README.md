@@ -110,3 +110,15 @@ When you run the program, you will see a menu:
 6. Generate sales analytics report  
 
 ---
+
+## 💾 Data Storage
+
+All inventory, customer, and order data is stored in:
+
+```
+data/inventory_data.json
+```
+
+This ensures persistence across program runs.
+
+---
