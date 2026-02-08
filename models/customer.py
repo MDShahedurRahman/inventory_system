@@ -9,3 +9,7 @@ class Customer:
             "customer_id": self.customer_id,
             "name": self.name
         }
+
+    @staticmethod
+    def from_dict(data):
+        return Customer(data["customer_id"], data["name"])
