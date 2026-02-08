@@ -45,3 +45,7 @@ class InventoryController:
     def view_inventory_flow(self):
         products = self.service.get_all_products()
         self.view.display_products(products)
+
+    def view_orders_flow(self):
+        orders = self.service.get_all_orders()
+        self.view.display_orders(orders)
