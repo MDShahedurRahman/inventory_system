@@ -9,3 +9,16 @@ class InventoryService:
 
     def __init__(self):
         self.repo = InventoryRepository()
+
+
+def add_product(self, product_data):
+    data = self.repo.load_data()
+    new_id = len(data["products"]) + 1
+
+    product = Product(new_id,
+                      product_data["name"],
+                      product_data["price"],
+                      product_data["stock"])
+
+    data["products"].append(product.to_dict())
+    self.repo.save_data(data)
