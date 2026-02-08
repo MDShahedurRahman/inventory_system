@@ -58,3 +58,28 @@ inventory_system/
 ```
 
 ---
+
+## ⚙️ Installation
+
+### Prerequisites
+
+- Python 3.8 or higher
+
+---
+
+### Setup
+
+Clone the repository:
+
+```bash
+git clone https://github.com/yourusername/inventory-order-system.git
+cd inventory-order-system
+```
+
+Run the application:
+
+```bash
+python main.py
+```
+
+---
