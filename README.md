@@ -165,3 +165,14 @@ total_revenue: 1200.00
 - Test invalid inputs (wrong product/customer IDs)
 
 ---
+
+## 📌 Future Enhancements
+
+- Replace JSON with SQLite/PostgreSQL  
+- Add product categories  
+- Add order cancellation/refund support  
+- Implement REST API using FastAPI  
+- Add admin vs customer roles  
+- Export reports to CSV  
+
+---
