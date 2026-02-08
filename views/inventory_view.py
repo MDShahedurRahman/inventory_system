@@ -32,3 +32,8 @@ class InventoryView:
         print("\n--- Product Inventory ---")
         for p in products:
             print(p)
+
+    def display_orders(self, orders):
+        print("\n--- Orders ---")
+        for o in orders:
+            print(o)
