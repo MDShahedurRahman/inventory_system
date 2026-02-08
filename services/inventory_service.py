@@ -62,3 +62,7 @@ def place_order(self, order_data):
 
     data["orders"].append(order.to_dict())
     self.repo.save_data(data)
+
+
+def get_all_products(self):
+    return self.repo.load_data()["products"]
