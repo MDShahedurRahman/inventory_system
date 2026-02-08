@@ -41,3 +41,7 @@ class InventoryController:
     def place_order_flow(self):
         data = self.view.get_order_input()
         self.service.place_order(data)
+
+    def view_inventory_flow(self):
+        products = self.service.get_all_products()
+        self.view.display_products(products)
