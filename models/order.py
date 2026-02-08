@@ -15,3 +15,13 @@ class Order:
             "quantity": self.quantity,
             "total_price": self.total_price
         }
+
+    @staticmethod
+    def from_dict(data):
+        return Order(
+            data["order_id"],
+            data["customer_id"],
+            data["product_id"],
+            data["quantity"],
+            data["total_price"]
+        )
