@@ -29,3 +29,7 @@ class InventoryController:
                 break
             else:
                 print("Invalid option.")
+
+    def add_product_flow(self):
+        data = self.view.get_product_input()
+        self.service.add_product(data)
