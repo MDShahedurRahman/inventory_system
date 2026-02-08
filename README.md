@@ -83,3 +83,19 @@ python main.py
 ```
 
 ---
+
+## ▶️ Usage
+
+When you run the program, you will see a menu:
+
+```
+1. Add Product
+2. Add Customer
+3. Place Order
+4. View Inventory
+5. View Orders
+6. Sales Analytics
+0. Exit
+```
+
+---
