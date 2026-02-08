@@ -155,3 +155,13 @@ total_revenue: 1200.00
 - Git Commit Discipline  
 
 ---
+
+## 🧪 Testing Suggestions
+
+- Add multiple products and verify stock updates  
+- Place orders until stock runs out  
+- Restart the program to confirm persistence  
+- Verify revenue analytics accuracy  
+- Test invalid inputs (wrong product/customer IDs)
+
+---
