@@ -24,3 +24,37 @@ It is designed as a **portfolio-quality project** to demonstrate clean architect
 - Clean MVC separation  
 
 ---
+
+## 🏗 Project Architecture (MVC)
+
+```
+inventory_system/
+│
+├── main.py
+│
+├── controllers/
+│   └── inventory_controller.py
+│
+├── models/
+│   ├── product.py
+│   ├── customer.py
+│   └── order.py
+│
+├── services/
+│   └── inventory_service.py
+│
+├── repositories/
+│   └── inventory_repository.py
+│
+├── views/
+│   └── inventory_view.py
+│
+├── utils/
+│   ├── validation_utils.py
+│   └── analytics_utils.py
+│
+└── data/
+    └── inventory_data.json
+```
+
+---
