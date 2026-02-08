@@ -10,3 +10,10 @@ class InventoryView:
         print("6. Sales Analytics")
         print("0. Exit")
         return input("Choose: ")
+
+    def get_product_input(self):
+        return {
+            "name": input("Product name: "),
+            "price": float(input("Price: ")),
+            "stock": int(input("Stock quantity: "))
+        }
