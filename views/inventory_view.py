@@ -27,3 +27,8 @@ class InventoryView:
             "product_id": int(input("Product ID: ")),
             "quantity": int(input("Quantity: "))
         }
+
+    def display_products(self, products):
+        print("\n--- Product Inventory ---")
+        for p in products:
+            print(p)
