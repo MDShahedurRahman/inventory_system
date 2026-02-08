@@ -69,13 +69,6 @@ inventory_system/
 
 ### Setup
 
-Clone the repository:
-
-```bash
-git clone https://github.com/yourusername/inventory-order-system.git
-cd inventory-order-system
-```
-
 Run the application:
 
 ```bash
@@ -156,62 +149,6 @@ total_revenue: 1200.00
 
 ---
 
-## 📝 Git Commit Strategy (50 Commits)
-
-This project is designed to be built with **one method per commit**, like a real software workflow.
-
-### Phase 1: Setup (1–10)
-
-- main.py → main()
-- inventory_controller.py → run()
-- inventory_view.py → show_menu()
-- inventory_repository.py → load_data(), save_data()
-- product.py, customer.py, order.py base models
-
----
-
-### Phase 2: Model Methods (11–18)
-
-- Product.reduce_stock()
-- Serialization methods (to_dict, from_dict)
-- Analytics utility methods
-- Validation helpers
-
----
-
-### Phase 3: Service Layer Core (19–35)
-
-- add_product()
-- add_customer()
-- place_order()
-- generate_sales_report()
-- Restock product feature
-- Delete/update product methods
-- Low stock alerts
-- Revenue breakdown enhancements
-
----
-
-### Phase 4: Controller Flows (36–45)
-
-- add_product_flow()
-- add_customer_flow()
-- place_order_flow()
-- view_inventory_flow()
-- analytics_flow()
-- Input validation and error handling
-
----
-
-### Phase 5: View & UI Improvements (46–50)
-
-- Improved formatted printing
-- Better menu experience
-- Report display improvements
-- Final README + cleanup
-
----
-
 ## 🧪 Testing Suggestions
 
 - Add multiple products and verify stock updates  
@@ -252,6 +189,3 @@ data/inventory_data.json
 Master’s in Computer Science  
 Data Engineering | Backend Development | Python | Java | Distributed Systems  
 
----
-
-✅ Portfolio-ready project demonstrating backend architecture and real-world order processing logic.
