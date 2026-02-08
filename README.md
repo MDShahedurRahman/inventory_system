@@ -141,3 +141,17 @@ total_revenue: 1200.00
 ```
 
 ---
+
+## 🧠 Concepts Demonstrated
+
+- MVC Architecture in Python  
+- Clean Code and Modular Design  
+- Repository Pattern  
+- Business Logic Layer (Service Layer)  
+- JSON Persistence  
+- Inventory Stock Management  
+- Order Processing Workflow  
+- Backend Analytics Reporting  
+- Git Commit Discipline  
+
+---
