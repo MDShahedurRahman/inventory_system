@@ -8,3 +8,11 @@ class Product:
 
     def reduce_stock(self, quantity):
         self.stock -= quantity
+
+    def to_dict(self):
+        return {
+            "product_id": self.product_id,
+            "name": self.name,
+            "price": self.price,
+            "stock": self.stock
+        }
