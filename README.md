@@ -122,3 +122,22 @@ data/inventory_data.json
 This ensures persistence across program runs.
 
 ---
+
+## 📊 Sales Analytics
+
+The system provides business-level insights such as:
+
+- Total number of products
+- Total orders placed
+- Total revenue generated
+
+Example report:
+
+```
+=== Sales Report ===
+total_products: 5
+total_orders: 3
+total_revenue: 1200.00
+```
+
+---
