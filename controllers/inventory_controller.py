@@ -7,3 +7,25 @@ class InventoryController:
     def __init__(self):
         self.service = InventoryService()
         self.view = InventoryView()
+
+    def run(self):
+        while True:
+            choice = self.view.show_menu()
+
+            if choice == "1":
+                self.add_product_flow()
+            elif choice == "2":
+                self.add_customer_flow()
+            elif choice == "3":
+                self.place_order_flow()
+            elif choice == "4":
+                self.view_inventory_flow()
+            elif choice == "5":
+                self.view_orders_flow()
+            elif choice == "6":
+                self.analytics_flow()
+            elif choice == "0":
+                print("Exiting Inventory System...")
+                break
+            else:
+                print("Invalid option.")
