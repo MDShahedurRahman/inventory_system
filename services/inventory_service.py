@@ -6,3 +6,6 @@ from utils.analytics_utils import calculate_total_revenue
 
 
 class InventoryService:
+
+    def __init__(self):
+        self.repo = InventoryRepository()
