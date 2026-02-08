@@ -99,3 +99,14 @@ When you run the program, you will see a menu:
 ```
 
 ---
+
+## 📌 Example Workflow
+
+1. Add products such as Laptop, Phone, Headphones  
+2. Register customers  
+3. Place an order for a customer  
+4. Stock is automatically reduced  
+5. View inventory updates  
+6. Generate sales analytics report  
+
+---
