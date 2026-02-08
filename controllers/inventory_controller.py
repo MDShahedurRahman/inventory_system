@@ -33,3 +33,7 @@ class InventoryController:
     def add_product_flow(self):
         data = self.view.get_product_input()
         self.service.add_product(data)
+
+    def add_customer_flow(self):
+        data = self.view.get_customer_input()
+        self.service.add_customer(data)
