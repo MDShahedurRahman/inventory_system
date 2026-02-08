@@ -16,3 +16,12 @@ class Product:
             "price": self.price,
             "stock": self.stock
         }
+
+    @staticmethod
+    def from_dict(data):
+        return Product(
+            data["product_id"],
+            data["name"],
+            data["price"],
+            data["stock"]
+        )
