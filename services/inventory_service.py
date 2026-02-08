@@ -66,3 +66,7 @@ def place_order(self, order_data):
 
 def get_all_products(self):
     return self.repo.load_data()["products"]
+
+
+def get_all_orders(self):
+    return self.repo.load_data()["orders"]
