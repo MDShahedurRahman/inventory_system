@@ -49,3 +49,7 @@ class InventoryController:
     def view_orders_flow(self):
         orders = self.service.get_all_orders()
         self.view.display_orders(orders)
+
+    def analytics_flow(self):
+        report = self.service.generate_sales_report()
+        self.view.display_report(report)
