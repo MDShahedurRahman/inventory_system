@@ -5,3 +5,6 @@ class Product:
         self.name = name
         self.price = price
         self.stock = stock
+
+    def reduce_stock(self, quantity):
+        self.stock -= quantity
