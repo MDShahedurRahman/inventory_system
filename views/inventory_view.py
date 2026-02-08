@@ -37,3 +37,8 @@ class InventoryView:
         print("\n--- Orders ---")
         for o in orders:
             print(o)
+
+    def display_report(self, report):
+        print("\n=== Sales Report ===")
+        for k, v in report.items():
+            print(f"{k}: {v}")
