@@ -17,3 +17,6 @@ class InventoryView:
             "price": float(input("Price: ")),
             "stock": int(input("Stock quantity: "))
         }
+
+    def get_customer_input(self):
+        return {"name": input("Customer name: ")}
