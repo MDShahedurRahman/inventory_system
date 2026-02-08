@@ -8,3 +8,19 @@ This project simulates a real-world backend system like a mini e-commerce platfo
 It is designed as a **portfolio-quality project** to demonstrate clean architecture, layered design, and commit-by-method development.
 
 ---
+
+## 🚀 Features
+
+- Add and manage products in inventory  
+- Track product stock levels  
+- Register customers  
+- Place customer orders  
+- Automatically reduce stock after orders  
+- Prevent out-of-stock purchases  
+- View full inventory list  
+- View complete order history  
+- Sales and revenue analytics report  
+- Persistent JSON-based storage  
+- Clean MVC separation  
+
+---
